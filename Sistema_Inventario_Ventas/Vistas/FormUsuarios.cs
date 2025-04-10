@@ -8,13 +8,18 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Sistema_Inventario_Ventas
+namespace Sistema_Inventario_Ventas.Vistas
 {
-    public partial class Form1 : Form
+    public partial class FormUsuarios : Form
     {
-        public Form1()
+        public FormUsuarios()
         {
             InitializeComponent();
+        }
+
+        private void groupBox2_Enter(object sender, EventArgs e)
+        {
+
         }
     }
 }
