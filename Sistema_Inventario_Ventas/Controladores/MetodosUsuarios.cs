@@ -170,7 +170,7 @@ namespace Sistema_Inventario_Ventas.Clases
                 sqlConexion = new Conexion().ObternerConexion();
                 MySqlCommand comando = new MySqlCommand("ActualizarUsuario", sqlConexion);
                 comando.CommandType = CommandType.StoredProcedure;
-                comando.Parameters.Add("@id", MySqlDbType.Int32).Value = usuario.idUsuario;
+                comando.Parameters.Add("@id", MySqlDbType.Int32).Value = idUsuario;
                 comando.Parameters.Add("@nomUsuario", MySqlDbType.VarChar).Value = usuario.nomUsuario;
                 comando.Parameters.Add("@usuario", MySqlDbType.VarChar).Value = usuario.usuario;
                 comando.Parameters.Add("@contrasena", MySqlDbType.VarChar).Value = usuario.contrasena;
@@ -199,6 +199,77 @@ namespace Sistema_Inventario_Ventas.Clases
                 }
             }
         }
+
+        public DataTable BuscarUsuario(string nombre)
+        {
+
+            try
+            {
+                sqlConexion = new Conexion().ObternerConexion();
+                MySqlCommand comando = new MySqlCommand("BuscarUsuario", sqlConexion);
+                comando.CommandType = CommandType.StoredProcedure;
+                comando.Parameters.Add("@usuario", MySqlDbType.VarChar).Value = nombre.Trim();
+                sqlConexion.Open();
+                resultado = comando.ExecuteReader();
+                tabla.Load(resultado);
+                return tabla;
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+            finally
+            {
+                if (sqlConexion.State == ConnectionState.Open)
+                {
+                    sqlConexion.Close();
+                }
+            }
+        }
+
+        public Usuario LoginUsuario(string usuario, string contrasena)
+        {
+            Usuario user = new Usuario();
+
+            try
+            {
+                sqlConexion = new Conexion().ObternerConexion();
+                MySqlCommand comando = new MySqlCommand("LoginUsuario", sqlConexion);
+                comando.CommandType = CommandType.StoredProcedure;
+                comando.Parameters.Add("@user", MySqlDbType.VarChar).Value = usuario.Trim();
+                comando.Parameters.Add("@pass", MySqlDbType.VarChar).Value = contrasena.Trim();
+                sqlConexion.Open();
+                resultado = comando.ExecuteReader();
+
+                while (resultado.Read())
+                {
+                    if (resultado.Equals(""))
+                    {
+                        user.idUsuario = 0;
+                    }else
+                    {
+                        user = new Usuario(
+                            resultado.GetInt32(0),
+                            resultado.GetString(1),
+                            resultado.GetString(2),
+                            resultado.GetString(3),
+                            resultado.GetInt32(4),
+                            resultado.GetInt32(5));
+                    }
+                }
+                return user;
+            } catch(Exception ex)
+            {
+                throw ex;
+            } finally
+            {
+                if(sqlConexion.State == ConnectionState.Open)
+                {
+                    sqlConexion.Close();
+                }
+            }
+        }
+
 
     }
 }
