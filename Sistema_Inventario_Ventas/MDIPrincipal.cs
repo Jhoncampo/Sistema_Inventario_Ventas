@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Sistema_Inventario_Ventas.Vistas;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -13,6 +14,10 @@ namespace Sistema_Inventario_Ventas
     public partial class MDIPrincipal : Form
     {
         private int childFormNumber = 0;
+        public int idUsuario;
+        public string nomUsuario;
+        public int idEstado;
+        public int idPermiso;
 
         public MDIPrincipal()
         {
@@ -107,6 +112,13 @@ namespace Sistema_Inventario_Ventas
         private void MDIPrincipal_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void usuariosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FormUsuarios formUsuarios = new FormUsuarios();
+            formUsuarios.MdiParent = this;
+            formUsuarios.Show();
         }
     }
 }

@@ -42,11 +42,11 @@
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.button2 = new System.Windows.Forms.Button();
-            this.comboBox3 = new System.Windows.Forms.ComboBox();
-            this.comboBox4 = new System.Windows.Forms.ComboBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.cbActEstados = new System.Windows.Forms.ComboBox();
+            this.cbActPermisos = new System.Windows.Forms.ComboBox();
+            this.tbActContrasena = new System.Windows.Forms.TextBox();
+            this.tbActUsuario = new System.Windows.Forms.TextBox();
+            this.tbActNombre = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
@@ -55,13 +55,14 @@
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.button4 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
-            this.textBox7 = new System.Windows.Forms.TextBox();
+            this.tbBuscarUsuario = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.DGVUsuarios = new System.Windows.Forms.DataGridView();
+            this.txtTotalUsuarios = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DGVUsuarios)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -178,11 +179,11 @@
             // groupBox2
             // 
             this.groupBox2.Controls.Add(this.button2);
-            this.groupBox2.Controls.Add(this.comboBox3);
-            this.groupBox2.Controls.Add(this.comboBox4);
-            this.groupBox2.Controls.Add(this.textBox4);
-            this.groupBox2.Controls.Add(this.textBox5);
-            this.groupBox2.Controls.Add(this.textBox6);
+            this.groupBox2.Controls.Add(this.cbActEstados);
+            this.groupBox2.Controls.Add(this.cbActPermisos);
+            this.groupBox2.Controls.Add(this.tbActContrasena);
+            this.groupBox2.Controls.Add(this.tbActUsuario);
+            this.groupBox2.Controls.Add(this.tbActNombre);
             this.groupBox2.Controls.Add(this.label6);
             this.groupBox2.Controls.Add(this.label7);
             this.groupBox2.Controls.Add(this.label8);
@@ -204,42 +205,42 @@
             this.button2.Text = "ACTUALIZAR";
             this.button2.UseVisualStyleBackColor = true;
             // 
-            // comboBox3
+            // cbActEstados
             // 
-            this.comboBox3.FormattingEnabled = true;
-            this.comboBox3.Location = new System.Drawing.Point(111, 149);
-            this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(143, 21);
-            this.comboBox3.TabIndex = 9;
+            this.cbActEstados.FormattingEnabled = true;
+            this.cbActEstados.Location = new System.Drawing.Point(111, 149);
+            this.cbActEstados.Name = "cbActEstados";
+            this.cbActEstados.Size = new System.Drawing.Size(143, 21);
+            this.cbActEstados.TabIndex = 9;
             // 
-            // comboBox4
+            // cbActPermisos
             // 
-            this.comboBox4.FormattingEnabled = true;
-            this.comboBox4.Location = new System.Drawing.Point(111, 119);
-            this.comboBox4.Name = "comboBox4";
-            this.comboBox4.Size = new System.Drawing.Size(143, 21);
-            this.comboBox4.TabIndex = 8;
+            this.cbActPermisos.FormattingEnabled = true;
+            this.cbActPermisos.Location = new System.Drawing.Point(111, 119);
+            this.cbActPermisos.Name = "cbActPermisos";
+            this.cbActPermisos.Size = new System.Drawing.Size(143, 21);
+            this.cbActPermisos.TabIndex = 8;
             // 
-            // textBox4
+            // tbActContrasena
             // 
-            this.textBox4.Location = new System.Drawing.Point(111, 87);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(143, 20);
-            this.textBox4.TabIndex = 7;
+            this.tbActContrasena.Location = new System.Drawing.Point(111, 87);
+            this.tbActContrasena.Name = "tbActContrasena";
+            this.tbActContrasena.Size = new System.Drawing.Size(143, 20);
+            this.tbActContrasena.TabIndex = 7;
             // 
-            // textBox5
+            // tbActUsuario
             // 
-            this.textBox5.Location = new System.Drawing.Point(111, 57);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(143, 20);
-            this.textBox5.TabIndex = 6;
+            this.tbActUsuario.Location = new System.Drawing.Point(111, 57);
+            this.tbActUsuario.Name = "tbActUsuario";
+            this.tbActUsuario.Size = new System.Drawing.Size(143, 20);
+            this.tbActUsuario.TabIndex = 6;
             // 
-            // textBox6
+            // tbActNombre
             // 
-            this.textBox6.Location = new System.Drawing.Point(111, 29);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(143, 20);
-            this.textBox6.TabIndex = 5;
+            this.tbActNombre.Location = new System.Drawing.Point(111, 29);
+            this.tbActNombre.Name = "tbActNombre";
+            this.tbActNombre.Size = new System.Drawing.Size(143, 20);
+            this.tbActNombre.TabIndex = 5;
             // 
             // label6
             // 
@@ -290,7 +291,7 @@
             // 
             this.groupBox3.Controls.Add(this.button4);
             this.groupBox3.Controls.Add(this.button3);
-            this.groupBox3.Controls.Add(this.textBox7);
+            this.groupBox3.Controls.Add(this.tbBuscarUsuario);
             this.groupBox3.Controls.Add(this.label11);
             this.groupBox3.Location = new System.Drawing.Point(316, 44);
             this.groupBox3.Name = "groupBox3";
@@ -316,12 +317,12 @@
             this.button3.Text = "BUSCAR";
             this.button3.UseVisualStyleBackColor = true;
             // 
-            // textBox7
+            // tbBuscarUsuario
             // 
-            this.textBox7.Location = new System.Drawing.Point(115, 20);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(387, 20);
-            this.textBox7.TabIndex = 11;
+            this.tbBuscarUsuario.Location = new System.Drawing.Point(115, 20);
+            this.tbBuscarUsuario.Name = "tbBuscarUsuario";
+            this.tbBuscarUsuario.Size = new System.Drawing.Size(387, 20);
+            this.tbBuscarUsuario.TabIndex = 11;
             // 
             // label11
             // 
@@ -332,20 +333,28 @@
             this.label11.TabIndex = 11;
             this.label11.Text = "BUSCAR USUARIO";
             // 
-            // dataGridView1
+            // DGVUsuarios
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(316, 107);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(743, 495);
-            this.dataGridView1.TabIndex = 13;
+            this.DGVUsuarios.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.DGVUsuarios.Location = new System.Drawing.Point(316, 107);
+            this.DGVUsuarios.Name = "DGVUsuarios";
+            this.DGVUsuarios.Size = new System.Drawing.Size(743, 495);
+            this.DGVUsuarios.TabIndex = 13;
+            // 
+            // txtTotalUsuarios
+            // 
+            this.txtTotalUsuarios.Location = new System.Drawing.Point(959, 619);
+            this.txtTotalUsuarios.Name = "txtTotalUsuarios";
+            this.txtTotalUsuarios.Size = new System.Drawing.Size(100, 20);
+            this.txtTotalUsuarios.TabIndex = 14;
             // 
             // FormUsuarios
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1071, 661);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.txtTotalUsuarios);
+            this.Controls.Add(this.DGVUsuarios);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
@@ -358,8 +367,9 @@
             this.groupBox2.PerformLayout();
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DGVUsuarios)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -379,11 +389,11 @@
         private System.Windows.Forms.TextBox tbNombre;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.ComboBox comboBox3;
-        private System.Windows.Forms.ComboBox comboBox4;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.TextBox textBox6;
+        private System.Windows.Forms.ComboBox cbActEstados;
+        private System.Windows.Forms.ComboBox cbActPermisos;
+        private System.Windows.Forms.TextBox tbActContrasena;
+        private System.Windows.Forms.TextBox tbActUsuario;
+        private System.Windows.Forms.TextBox tbActNombre;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
@@ -393,7 +403,8 @@
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.TextBox textBox7;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.TextBox tbBuscarUsuario;
+        private System.Windows.Forms.DataGridView DGVUsuarios;
+        private System.Windows.Forms.TextBox txtTotalUsuarios;
     }
 }
