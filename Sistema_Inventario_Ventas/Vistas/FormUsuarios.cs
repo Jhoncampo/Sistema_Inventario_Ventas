@@ -163,7 +163,7 @@ namespace Sistema_Inventario_Ventas.Vistas
                 MessageBox.Show(ex.Message);
             }
         }
-        private void DGVUsuario_CellClick(object sender, DataGridViewCellCancelEventArgs e)
+        private void DGVUsuarios_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             if(e.RowIndex == -1)
             {
@@ -179,6 +179,11 @@ namespace Sistema_Inventario_Ventas.Vistas
                 cbActEstados.SelectedIndex = Convert.ToInt32(DGVUsuarios.Rows[e.RowIndex].Cells["ESTADO"].Value.ToString().Trim());
 
             }
+        }
+
+        private void label12_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

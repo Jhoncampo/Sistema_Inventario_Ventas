@@ -58,7 +58,7 @@
             this.tbBuscarUsuario = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
             this.DGVUsuarios = new System.Windows.Forms.DataGridView();
-            this.txtTotalUsuarios = new System.Windows.Forms.TextBox();
+            this.txtTotalUsuarios = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -93,6 +93,7 @@
             this.button1.TabIndex = 10;
             this.button1.Text = "AGREGAR";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.btnAgregar_Click);
             // 
             // cbEstados
             // 
@@ -204,6 +205,7 @@
             this.button2.TabIndex = 10;
             this.button2.Text = "ACTUALIZAR";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.btnActualizar_Click);
             // 
             // cbActEstados
             // 
@@ -289,6 +291,8 @@
             // 
             // groupBox3
             // 
+            this.groupBox3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBox3.Controls.Add(this.button4);
             this.groupBox3.Controls.Add(this.button3);
             this.groupBox3.Controls.Add(this.tbBuscarUsuario);
@@ -301,24 +305,33 @@
             // 
             // button4
             // 
+            this.button4.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.button4.Location = new System.Drawing.Point(605, 17);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(132, 23);
             this.button4.TabIndex = 12;
             this.button4.Text = "MOSTRAR TODOS";
             this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.btnMostrarUsuarios_Click);
             // 
             // button3
             // 
+            this.button3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.button3.Location = new System.Drawing.Point(508, 19);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(91, 23);
             this.button3.TabIndex = 11;
             this.button3.Text = "BUSCAR";
             this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.btnBuscarUsuario_Click);
             // 
             // tbBuscarUsuario
             // 
+            this.tbBuscarUsuario.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.tbBuscarUsuario.Location = new System.Drawing.Point(115, 20);
             this.tbBuscarUsuario.Name = "tbBuscarUsuario";
             this.tbBuscarUsuario.Size = new System.Drawing.Size(387, 20);
@@ -326,6 +339,8 @@
             // 
             // label11
             // 
+            this.label11.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
             this.label11.AutoSize = true;
             this.label11.Location = new System.Drawing.Point(6, 23);
             this.label11.Name = "label11";
@@ -340,13 +355,18 @@
             this.DGVUsuarios.Name = "DGVUsuarios";
             this.DGVUsuarios.Size = new System.Drawing.Size(743, 495);
             this.DGVUsuarios.TabIndex = 13;
+            this.DGVUsuarios.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DGVUsuarios_CellClick);
             // 
             // txtTotalUsuarios
             // 
-            this.txtTotalUsuarios.Location = new System.Drawing.Point(959, 619);
+            this.txtTotalUsuarios.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtTotalUsuarios.AutoSize = true;
+            this.txtTotalUsuarios.Location = new System.Drawing.Point(1012, 630);
             this.txtTotalUsuarios.Name = "txtTotalUsuarios";
-            this.txtTotalUsuarios.Size = new System.Drawing.Size(100, 20);
+            this.txtTotalUsuarios.Size = new System.Drawing.Size(41, 13);
             this.txtTotalUsuarios.TabIndex = 14;
+            this.txtTotalUsuarios.Text = "label12";
+            this.txtTotalUsuarios.Click += new System.EventHandler(this.label12_Click);
             // 
             // FormUsuarios
             // 
@@ -405,6 +425,6 @@
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.TextBox tbBuscarUsuario;
         private System.Windows.Forms.DataGridView DGVUsuarios;
-        private System.Windows.Forms.TextBox txtTotalUsuarios;
+        private System.Windows.Forms.Label txtTotalUsuarios;
     }
 }
