@@ -21,7 +21,7 @@ namespace Sistema_Inventario_Ventas.Clases
             this.db = "sistemaventas";
             this.servidor = "localhost";
             this.usuario = "root";
-            this.contrasena = "Hola";
+            this.contrasena = "Jhon3126114451";
             this.ssl = "None";
         }
 

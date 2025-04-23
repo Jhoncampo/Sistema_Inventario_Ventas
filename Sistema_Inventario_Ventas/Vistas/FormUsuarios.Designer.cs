@@ -190,7 +190,7 @@
             this.groupBox2.Controls.Add(this.label8);
             this.groupBox2.Controls.Add(this.label9);
             this.groupBox2.Controls.Add(this.label10);
-            this.groupBox2.Location = new System.Drawing.Point(35, 274);
+            this.groupBox2.Location = new System.Drawing.Point(35, 287);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(273, 222);
             this.groupBox2.TabIndex = 11;
@@ -297,7 +297,7 @@
             this.groupBox3.Controls.Add(this.button3);
             this.groupBox3.Controls.Add(this.tbBuscarUsuario);
             this.groupBox3.Controls.Add(this.label11);
-            this.groupBox3.Location = new System.Drawing.Point(316, 44);
+            this.groupBox3.Location = new System.Drawing.Point(316, 35);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Size = new System.Drawing.Size(743, 55);
             this.groupBox3.TabIndex = 12;
@@ -351,9 +351,9 @@
             // DGVUsuarios
             // 
             this.DGVUsuarios.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.DGVUsuarios.Location = new System.Drawing.Point(316, 107);
+            this.DGVUsuarios.Location = new System.Drawing.Point(316, 96);
             this.DGVUsuarios.Name = "DGVUsuarios";
-            this.DGVUsuarios.Size = new System.Drawing.Size(743, 495);
+            this.DGVUsuarios.Size = new System.Drawing.Size(743, 514);
             this.DGVUsuarios.TabIndex = 13;
             this.DGVUsuarios.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DGVUsuarios_CellClick);
             // 
@@ -361,7 +361,7 @@
             // 
             this.txtTotalUsuarios.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.txtTotalUsuarios.AutoSize = true;
-            this.txtTotalUsuarios.Location = new System.Drawing.Point(1012, 630);
+            this.txtTotalUsuarios.Location = new System.Drawing.Point(918, 628);
             this.txtTotalUsuarios.Name = "txtTotalUsuarios";
             this.txtTotalUsuarios.Size = new System.Drawing.Size(41, 13);
             this.txtTotalUsuarios.TabIndex = 14;

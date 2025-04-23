@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Org.BouncyCastle.Tls;
 using Sistema_Inventario_Ventas.Clases;
 
 namespace Sistema_Inventario_Ventas.Vistas
@@ -50,7 +51,7 @@ namespace Sistema_Inventario_Ventas.Vistas
             cbEstados.Items.Add("Selecciona una opción");
             foreach (Estado dato in datos)
             {
-                cbEstados.Items.Add(dato.estado +1 + "- "+ dato.descripcion);
+                cbEstados.Items.Add(dato.idEstado  + " - "+ dato.descripcion);
             }
             cbEstados.SelectedIndex = 0;
         }
@@ -71,8 +72,8 @@ namespace Sistema_Inventario_Ventas.Vistas
             string nomUsuario = tbNombre.Text;
             string usuario = tbUsuario.Text;
             string contrasena = tbContrasena.Text;
-            int idPermiso = cbActPermisos.SelectedIndex;
-            int idEstado = cbActEstados.SelectedIndex;
+            int idPermiso = cbPermisos.SelectedIndex;
+            int idEstado = cbEstados.SelectedIndex;
 
             Usuario nuevoUsuario = new Usuario(nomUsuario, usuario, contrasena, idPermiso, idEstado);
 
@@ -90,9 +91,9 @@ namespace Sistema_Inventario_Ventas.Vistas
         }
         private void btnActualizar_Click(object sender, EventArgs e)
         {
-            string nomUsuario = tbNombre.Text;
-            string usuario = tbUsuario.Text;
-            string contrasena = tbContrasena.Text;
+            string nomUsuario = tbActNombre.Text;
+            string usuario = tbActUsuario.Text;
+            string contrasena = tbActContrasena.Text;
             int idPermiso = cbActPermisos.SelectedIndex;
             int idEstado = cbActEstados.SelectedIndex;
 
